@@ -1,4 +1,4 @@
-function cinemaTariffs() {
+const cinemaTariffs = () => {
     let reducedTariff = true;
     let priceToPay = 10;
 
@@ -6,10 +6,10 @@ function cinemaTariffs() {
         priceToPay = 8;
     }
 
-    console.log(priceToPay + "€");
+    return `${priceToPay}€`;
 }
 
-function maximum() {
+const maximum = () => {
     let a = 9;
     let b = 2;
     let c = 3;
@@ -22,10 +22,10 @@ function maximum() {
         }
     }
 
-    console.log(max);
+    return max;
 }
 
-function identicalDice() {
+const identicalDice = () => {
     let firstDice = Math.floor(Math.random() * 6) + 1;
     let secondDice = Math.floor(Math.random() * 6) + 1;
     let thirdDice= Math.floor(Math.random() * 6) + 1;
@@ -49,14 +49,12 @@ function identicalDice() {
     }
 
     if(cpt > 1)
-        console.log(cpt + " identical dices");
+        return `${cpt} identical dices:\n${firstDice}, ${secondDice}, ${thirdDice}.`;
     else
-        console.log("No identical dice!");
-
-    console.log(firstDice + ", " + secondDice + ", " + thirdDice);
+        return `No identical dice!:\n${firstDice}, ${secondDice}, ${thirdDice}.`;
 }
 
-function daySNumber() {
+const daySNumber = () => {
     let nb = 5;
     let day = "No day";
 
@@ -84,10 +82,10 @@ function daySNumber() {
             break;
     }
 
-    console.log(nb + ": " + day);
+    return `${nb}: ${day}`;
 }
 
-function printShop() {
+const printShop = () => {
     const FIRST_TEN = 0.12;
     const NEXT_TWENTY = 0.11;
     const NEXT = 0.10;
@@ -105,11 +103,11 @@ function printShop() {
         total += NEXT * (nbCopies - 30);
     }
     
-    console.log(total);
+    return total;
 }
 
-//cinemaTariffs();
-//maximum();
-//identicalDice();
-//daySNumber();
-printShop();
+//console.log(cinemaTariffs());
+//console.log(maximum());
+//console.log(identicalDice());
+//console.log(daySNumber());
+console.log(printShop());

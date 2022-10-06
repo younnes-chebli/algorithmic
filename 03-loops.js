@@ -1,46 +1,61 @@
-function printNumbersOneToN() {
+const printNumbersOneToN = () => {
     let n = 5;
+    let res = [];
 
     for(let i = 1; i <= n; ++i) {
-        console.log(i);
+        res.push(i);
     }
+
+    return res;
 }
 
-function printNumbersOneToNDesc() {
+const printNumbersOneToNDesc = () => {
     let n = 5;
+    let res = [];
 
     for(let i = n; i > 0; --i) {
-        console.log(i);
+        res.push(i);
     }
+
+    return res;
 }
 
-function printNumbersMinusNToN() {
+const printNumbersMinusNToN = () => {
     let n = 5;
+    let res = [];
 
     for(let i = -n; i <= n; ++i) {
-        console.log(i);
+        res.push(i);
     }
+
+    return res;
 }
 
-function printNumbersOneToNOdd() {
+const printNumbersOneToNOdd = () => {
     let n = 5;
+    let res = [];
 
     for(let i = 1; i <= n; ++i) {
         if(i % 2 !== 0) {
-            console.log(i);
+            res.push(i);
         }
     }
+
+    return res;
 }
 
-function printRandomNumbersInt() {
+const printRandomNumbersInt = () => {
     let randomInt = Math.floor(Math.random() * 10);
+    let res = [];
 
     for(let i = 1; i <= randomInt; ++i) {
-        console.log(i);
+        res.push(i);
     }
+
+    return res;
 }
 
-function throwDices() {
+const throwDices = () => {
     let nbOfThrow = 3;
     let searchedNb = 6;
     let dices = [];
@@ -54,20 +69,23 @@ function throwDices() {
         dices.push(dice);
     }
 
-    console.log(dices + ": " + searchedNb + " appears " + cpt + " times");
+    return `${dices}:\n${searchedNb} appears ${cpt} times.`;
 }
 
-function evenNumbers() {
+const evenNumbers = () => {
     let nb = 6;
+    let res = [];
 
     for(let i = 0; i <= nb; ++i) {
         if(i % 2 == 0) {
-            console.log(i);
+            res.push(i);
         }
     }
+
+    return res;
 }
 
-function perfectNumber() {
+const perfectNumber = () => {
     let number = 5;
     let perfect = false;
     let cpt = 0;
@@ -83,14 +101,14 @@ function perfectNumber() {
         perfect = true;
     }
 
-    console.log("Is " + number + " perfect? " + perfect);
+    return `Is ${number} perfect? ${perfect}`;
 }
 
-//printNumbersOneToN();
-//printNumbersOneToNDesc();
-//printNumbersMinusNToN();
-//printNumbersOneToNOdd();
-//printRandomNumbersInt();
-//throwDices();
-//evenNumbers();
-perfectNumber();
+//console.log(printNumbersOneToN());
+//console.log(printNumbersOneToNDesc());
+//console.log(printNumbersMinusNToN());
+//console.log(printNumbersOneToNOdd());
+//console.log(printRandomNumbersInt());
+//console.log(throwDices());
+//console.log(evenNumbers());
+console.log(perfectNumber());

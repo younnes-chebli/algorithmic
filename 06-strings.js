@@ -1,39 +1,39 @@
-function concatenation() {
+const concatenation = () => {
     let string1 = "Bonjour ";
     let string2 = "Au revoir";
     let concatenated = string1 + string2;
 
-    console.log(concatenated);
+    return concatenated;
 }
 
-function lowercase() {
+const lowercase = () => {
     let c = 'A';
     let lc = c.toLowerCase();
-    console.log(lc);
+    return lc;
 }
 
-function uppercase() {
+const uppercase = () => {
     let c = 'a';
     let uc = c.toUpperCase();
-    console.log(uc);
+    return uc;
 }
 
-function convertName() {
+const convertName = () => {
     let name = "Doe, John";
     name = name.replaceAll(",", "");
     let nameSplitted = name.split(" ");
     let nameConverted = nameSplitted[1] + " " + nameSplitted[0];
-    console.log(nameConverted);
+    return nameConverted;
 }
 
-function whitespace() {
+const whitespace = () => {
     let sentence = "Bonjour comment ça va ?";
     let sentenceWithoutWhitespaces = sentence.replaceAll(" ", "");
-    console.log(sentenceWithoutWhitespaces);
+    return sentenceWithoutWhitespaces;
 }
 
-// concatenation();
-//lowercase();
-//uppercase();
-//convertName();
-whitespace();
+//console.log(concatenation());
+//console.log(lowercase());
+//console.log(uppercase());
+//console.log(convertName());
+console.log(whitespace());

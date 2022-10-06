@@ -1,50 +1,50 @@
-function sum(){
+const sum = () => {
     let a = 1;
     let b = 1;
-    console.log(a + b);    
+    return a + b;    
 }
 
-function division() {
+const division = () => {
     let a = 9;
     let b = 3;
-    console.log(a / b);
+    return a / b;
 }
 
-function modulo() {
+const modulo = () => {
     let a = 13;
     let b = 4;
-    console.log(a % b);
+    return a % b;
 }
 
-function concatenate() {
+const concatenate = () => {
     let a = "Hello I'm ";
     let b = "Younnes";
-    console.log(a + b);
+    return a + b;
 }
 
-function vat() {
+const vat = () => {
     const RATE = 0.21;
     let price = 15;
     let res = price * RATE;
-    console.log(res);
+    return res;
 }
 
-function circleSurface() {
+const circleSurface = () => {
     let radius = 3;
-    console.log(Math.PI * (radius * radius));
+    return Math.PI * (radius * radius);
 }
 
-function convertionTimeToSeconds() {
+const convertionTimeToSeconds = () => {
     let hour = 1;
     let minutes = 0;
     let seconds = 0;
-    console.log((hour * 3600) + (minutes * 60) + seconds);
+    return (hour * 3600) + (minutes * 60) + seconds;
 }
 
-//sum();
-//division();
-//modulo();
-//concatenate();
-//vat();
-//circleSurface();
-convertionTimeToSeconds();
+//console.log(sum());
+//console.log(division());
+//console.log(modulo());
+//console.log(concatenate());
+//console.log(vat());
+//console.log(circleSurface());
+console.log(convertionTimeToSeconds());

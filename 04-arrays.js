@@ -1,9 +1,9 @@
-function printArray(){
+const printArray = () =>{
     let myArray = ["Hello", 30];
-    console.log(myArray);
+    return myArray;
 }
 
-function maximum() {
+const maximum = () => {
     let myArray = [0];
     let max;
 
@@ -14,13 +14,13 @@ function maximum() {
                 max = element;
             }
         }
-        console.log("Max: " + max);
+        return `Max: ${max}`;
     } else {
-        console.log("Array is empty");
+        return `Array is empty`;
     }
 }
 
-function minimum() {
+const minimum = () => {
     let myArray = [0, 30, -5];
     let min;
 
@@ -31,13 +31,13 @@ function minimum() {
                 min = element;
             }
         }
-        console.log("Min: " + min);
+        return `Min: ${min}`;
     } else {
-        console.log("Array is empty");
+        return `Array is empty`;
     }
 }
 
-function minimumPosition() {
+const minimumPosition = () => {
     let myArray = [-90, 30, -5];
     let min;
     let minPos;
@@ -51,14 +51,13 @@ function minimumPosition() {
                 minPos = myArray.indexOf(min);
             }
         }
-        console.log("Min: " + min);
-        console.log("Index: " + minPos);
+        return `Min: ${min}\nIndex: ${minPos}`;
     } else {
-        console.log("Array is empty");
+        return `Array is empty`;
     }
 }
 
-function orderedArray() {
+const orderedArray = () => {
     let myArray = [1, 9, 5, 6];
     let ordered;
 
@@ -71,19 +70,19 @@ function orderedArray() {
             }
         }
     } else {
-        console.log("Array is empty!");
+        return `Array is empty!`;
     }
 
     if(ordered === true) {
-        console.log("Array is ordered!");
+        return `Array is ordered!`;
     } else if(ordered === false) {
-        console.log("Array is not ordered!")
+        return `Array is not ordered!`;
     }
-    console.log(myArray);
+    return myArray;
 }
 
-//printArray();
-//maximum();
-//minimum();
-//minimumPosition();
-orderedArray();
+//console.log(printArray());
+//console.log(maximum());
+//console.log(minimum());
+//console.log(minimumPosition());
+console.log(orderedArray());

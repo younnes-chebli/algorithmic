@@ -1,8 +1,8 @@
-function convertionTimeToSeconds(hour, minutes, seconds) {
-    console.log((hour * 3600) + (minutes * 60) + seconds);
+const convertionTimeToSeconds = (hour, minutes, seconds) => {
+    return (hour * 3600) + (minutes * 60) + seconds;
 }
 
-function printShop(nbCopies) {
+const printShop = (nbCopies) => {
     const FIRST_TEN = 0.12;
     const NEXT_TWENTY = 0.11;
     const NEXT = 0.10;
@@ -19,10 +19,10 @@ function printShop(nbCopies) {
         total += NEXT * (nbCopies - 30);
     }
     
-    console.log(total);
+    return total;
 }
 
-function perfectNumber(number) {
+const perfectNumber = (number) => {
     let perfect = false;
     let cpt = 0;
 
@@ -37,10 +37,10 @@ function perfectNumber(number) {
         perfect = true;
     }
 
-    console.log("Is " + number + " perfect? " + perfect);
+    return `Is ${number} perfect? ${perfect}`;
 }
 
-function minimumPosition(myArray) {
+const minimumPosition = (myArray) => {
     let min;
     let minPos;
 
@@ -53,14 +53,13 @@ function minimumPosition(myArray) {
                 minPos = myArray.indexOf(min);
             }
         }
-        console.log("Min: " + min);
-        console.log("Index: " + minPos);
+        return `Min: ${min}\nIndex: ${minPos}`;
     } else {
-        console.log("Array is empty");
+        return `Array is empty`;
     }
 }
 
-function orderedArray(myArray) {
+const orderedArray = (myArray) => {
     let ordered;
 
     if(myArray.length !== 0) {
@@ -72,19 +71,19 @@ function orderedArray(myArray) {
             }
         }
     } else {
-        console.log("Array is empty!");
+        return `Array is empty!`;
     }
 
     if(ordered === true) {
-        console.log("Array is ordered!");
+        return `Array is ordered!`;
     } else if(ordered === false) {
-        console.log("Array is not ordered!")
+        return `Array is not ordered!`;
     }
-    console.log(myArray);
+    return (myArray);
 }
 
-//convertionTimeToSeconds(1, 0, 0);
-//printShop(31);
-//perfectNumber(6);
-//minimumPosition([0, 30, -5]);
-orderedArray([1, 9, 5, 6]);
+//console.log(convertionTimeToSeconds(1, 0, 0));
+//console.log(printShop(31));
+//console.log(perfectNumber(6));
+//console.log(minimumPosition([0, 30, -5]));
+console.log(orderedArray([1, 9, 5, 6]));
